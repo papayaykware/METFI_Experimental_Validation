@@ -1,0 +1,54 @@
+# Plantilla de Pre-Registro METFI
+**Proyecto:** Validación Experimental METFI  
+**Versión:** 1.0  
+**Fecha:** [_____]  
+**Equipo responsable:** [_____]  
+
+---
+
+## 1. Objetivos
+- [ ] Definir hipótesis operativa
+- [ ] Especificar predicciones medibles
+- [ ] Determinar criterios de falsación
+
+---
+
+## 2. Infraestructura
+- Ubicación: [_____]  
+- Instrumentación:  
+  - Antenas: [modelo]  
+  - Magnetómetros: [modelo]  
+  - Sensores adicionales: [_____]  
+
+---
+
+## 3. Protocolos de Registro
+- Frecuencia de muestreo: [_____]  
+- Duración esperada de sesión: [_____]  
+- Criterios de exclusión de datos: [_____]  
+
+---
+
+## 4. Métodos de Análisis
+- Separación señal/ruido: [_____]  
+- Métodos espectrales: [FFT / Wavelet / Hilbert]  
+- Algoritmos de detección de patrones: [_____]  
+
+---
+
+## 5. Control de Sesgo
+- Pre-registro de parámetros de análisis: ✔  
+- Doble registro independiente: ✔  
+- Evaluación ciega de eventos: ✔  
+
+---
+
+## 6. Versionado y Archivo
+- Hash inicial: [_____]  
+- Commit Git: [_____]  
+- Etiqueta de versión: [_____]  
+
+---
+
+**Firma del Responsable:** ______________________  
+**Observaciones iniciales:** ______________________
