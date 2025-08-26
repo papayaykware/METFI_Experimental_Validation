@@ -1,0 +1,123 @@
+# Validación Experimental METFI: Pre-registro y Pipeline Avanzado
+
+## Descripción del proyecto
+
+Este repositorio consolida la metodología de **validación experimental del Modelo Electromagnético Toroidal de Forzamiento Interno (METFI)**, integrando datasets abiertos de magnetometría, ionosfera y bioelectromagnetismo.  
+Su objetivo es proporcionar un **marco operativo replicable y transparente**, libre de conflictos de interés, que permita:
+
+- Detectar resonancias toroidales internas de la Tierra.  
+- Diferenciar señal genuina de ruido ambiental.  
+- Integrar resultados en escenarios de ECDO y colapso civilizatorio.  
+- Estandarizar pre-registros para análisis longitudinal y comparativo.
+
+---
+
+## Objetivos
+
+1. Detectar patrones resonantes coherentes en magnetometría, ionosfera y biomarcadores.  
+2. Aplicar criterios de diferenciación señal/ruido multiescala.  
+3. Integrar los datos en un pre-registro estructurado y replicable.  
+4. Evaluar implicaciones del METFI en el contexto de ECDO.
+
+---
+
+## Checklist Operativo
+
+- [ ] Definir ubicación y condiciones ambientales de la estación experimental.  
+- [ ] Seleccionar instrumentos de medición adecuados:  
+  - Magnetómetro de flujo o SQUID  
+  - Antena loop para resonancias toroidales  
+  - Receptores GNSS para TEC  
+  - EEG/HRV u otros biomarcadores  
+- [ ] Establecer frecuencia de muestreo y redundancia de registro (mínimo triple)  
+- [ ] Configurar filtros espectrales para eliminación de ruido antropogénico y atmosférico  
+- [ ] Registrar eventos de referencia (actividad solar, tormentas geomagnéticas)  
+- [ ] Documentar protocolos de sincronización temporal entre datasets  
+- [ ] Guardar metadatos: fecha, hora, coordenadas, calibración  
+- [ ] Revisar integridad de los datos (hash o firma digital)  
+- [ ] Completar pre-registro en plantilla estandarizada
+
+---
+
+## Plantilla de Pre-registro (JSON ejemplo)
+
+```json
+{
+  "proyecto": "Validación METFI",
+  "fecha": "2025-08-25",
+  "objetivos": [
+    "Detección de patrones resonantes",
+    "Diferenciación señal/ruido",
+    "Correlación multiescala"
+  ],
+  "hipotesis": "El campo toroidal terrestre responde a estímulos de acoplamiento interno y se refleja en magnetometría, ionosfera y bioelectromagnetismo",
+  "protocolos": {
+    "sensores": ["Magnetómetro de flujo", "Antena loop", "Receptores GNSS", "EEG/HRV"],
+    "registro": "frecuencia 10 Hz, redundancia triple",
+    "control": "comparación con referencia astronómica local y filtros espectrales multibanda"
+  },
+  "observaciones": "",
+  "estado": "Pre-registro validado"
+}
+
+# METFI Pipeline: Extracción, filtrado y correlación multiescala
+
+def load_data(magneto_path, gnss_path, eeg_path):
+    mag_data = read_magnetometer(magneto_path)
+    tec_data = read_gnss(gnss_path)
+    eeg_data = read_eeg(eeg_path)
+    return mag_data, tec_data, eeg_data
+
+def filter_noise(data, bandpass, notch):
+    # Elimina ruido antropogénico y atmosférico
+    filtered = apply_bandpass(data, bandpass)
+    filtered = apply_notch(filtered, notch)
+    return filtered
+
+def detect_resonances(mag_data, tec_data, eeg_data):
+    mag_res = find_pulsations(mag_data, freq_range=[0.01,5])
+    tec_res = find_anomalies(tec_data)
+    eeg_res = detect_coherence(eeg_data)
+    return mag_res, tec_res, eeg_res
+
+def correlate_multiscale(mag_res, tec_res, eeg_res, window_hours=24):
+    # Correlación temporal y espectral
+    correlations = []
+    for t in time_windows(window_hours):
+        if mag_res[t].coherent_with(tec_res[t]) and mag_res[t].coherent_with(eeg_res[t]):
+            correlations.append(t)
+    return correlations
+
+def main():
+    mag, tec, eeg = load_data("magneto.csv", "gnss.csv", "eeg.csv")
+    mag_f = filter_noise(mag, bandpass=[0.01,5], notch=[50,60])
+    tec_f = filter_noise(tec, bandpass=[0.001,0.1], notch=[])
+    eeg_f = filter_noise(eeg, bandpass=[0.5,40], notch=[50,60])
+    mag_r, tec_r, eeg_r = detect_resonances(mag_f, tec_f, eeg_f)
+    correlated_events = correlate_multiscale(mag_r, tec_r, eeg_r)
+    print("Eventos METFI detectados:", correlated_events)
+
+if __name__ == "__main__":
+    main()
+           +------------------+
+           |  Núcleo Terrestre |
+           | Toroide METFI     |
+           +--------+---------+
+                    |
+                    v
+         +---------------------+
+         |   Magnetosfera      |
+         |  Pulsaciones Pc1-5  |
+         +----------+----------+
+                    |
+                    v
+         +---------------------+
+         |    Ionosfera TEC    |
+         |  Anomalías toroidales|
+         +----------+----------+
+                    |
+                    v
+         +---------------------+
+         |  Bioelectromagnetismo|
+         | EEG / HRV / Conducta |
+         +---------------------+
