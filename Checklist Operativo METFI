@@ -1,0 +1,42 @@
+# Checklist Operativo METFI
+**Proyecto:** Validación Experimental METFI  
+**Versión:** 1.0  
+**Fecha:** [_____]  
+**Responsable de Turno:** [_____]  
+
+---
+
+## 1. Infraestructura
+- [ ] Ubicación de antenas y sensores verificada
+- [ ] Conexión a red eléctrica/UPS estable
+- [ ] Condiciones ambientales registradas (T°, humedad, presión)
+- [ ] Apantallamiento electromagnético básico comprobado
+
+## 2. Sensores y Antenas
+- [ ] Calibración inicial completada
+- [ ] Antenas orientadas según protocolo (N-S / E-O / vertical)
+- [ ] Sensores de campo magnético (3 ejes) activos
+- [ ] Registro de ruido de fondo realizado
+
+## 3. Adquisición de Datos
+- [ ] Frecuencia de muestreo configurada (≥ 10 kHz)
+- [ ] Sincronización temporal validada (NTP / GPS)
+- [ ] Registro redundante habilitado (disco + backup)
+- [ ] Script de logging verificado
+
+## 4. Control de Calidad
+- [ ] Señales base METFI simuladas inyectadas para comparación
+- [ ] Test de separación señal/ruido completado
+- [ ] Archivo de metadatos (fecha, hora, operadores) generado
+- [ ] Hash de integridad SHA256 calculado
+
+## 5. Seguridad y Contingencia
+- [ ] UPS cargado y operativo
+- [ ] Protocolos de desconexión rápida revisados
+- [ ] Contactos de emergencia disponibles
+- [ ] Copia off-site programada
+
+---
+
+**Firma del Responsable:** ______________________  
+**Comentarios:** ___________________________________
